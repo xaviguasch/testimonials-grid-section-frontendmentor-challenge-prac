@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom properties */
+
+:root {
+  --ff-main: 'Barlow Semi Condensed', sans-serif;
+
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+
+  --fs-08: 0.5em;
+  --fs-10: 0.625rem;
+  --fs-12: 0.75rem;
+  --fs-13: 0.813rem;
+  --fs-14: 0.875rem;
+  --fs-15: 0.938rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-22: 1.375rem;
+  --fs-24: 1.5rem;
+  --fs-26: 1.625rem;
+  --fs-28: 1.75rem;
+  --fs-32: 2rem;
+  --fs-36: 2.25rem;
+  --fs-40: 2.5rem;
+  --fs-64: 4rem;
+
+  --clr-moderate-violet: hsl(263, 55%, 52%);
+  --clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-very-dark-grayish-blue-softer: hsla(217, 19%, 35%, 0.5);
+  --clr-very-dark-grayish-blue-softer-two: hsla(217, 19%, 35%, 0.7);
+
+  --clr-very-dark-blackish-blue: hsl(219, 29%, 14%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-white-darker: hsla(0, 0%, 100%, 0.5);
+  --clr-white-darker-two: hsla(0, 0%, 100%, 0.7);
+
+  --clr-light-gray: hsl(0, 0%, 81%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  background-color: var(--clr-light-grayish-blue);
+  color: var(--clr-white);
+  font-family: var(--ff-main);
+  line-height: 1.6;
+  font-size: var(--fs-13);
+  font-weight: var(--fw-medium);
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Typography */
+.person-name {
+  font-weight: var(--fw-semi-bold);
+}
+
+.person-position {
+  color: var(--clr-white-darker);
+  font-size: var(--fs-12);
+}
+
+.main-quote {
+  font-size: var(--fs-20);
+  line-height: 1.4;
+}
+
+.secondary-quote {
+  color: var(--clr-white-darker-two);
+}
+
+/* Utility styles */
+
+.container {
+  /* grid properties */
+  display: grid;
+  grid-auto-rows: auto;
+  margin: 4em 2em;
+}
+
+/* SECTIONS */
+.card {
+  border-radius: 0.5em;
+  padding: 2.5em 2em;
+  margin-top: 1em;
+  min-width: 275px;
+  max-width: 450px;
+}
+
+.card-1 {
+  background-color: var(--clr-moderate-violet);
+}
+
+.card-2 {
+  background-color: var(--clr-very-dark-grayish-blue);
+}
+
+.card-3,
+.card-5 {
+  background-color: var(--clr-white);
+}
+
+.card-3 .person-name,
+.card-3 .main-quote,
+.card-5 .person-name,
+.card-5 .main-quote {
+  color: var(--clr-very-dark-grayish-blue);
+}
+
+.card-3 .person-position,
+.card-5 .person-position {
+  color: var(--clr-very-dark-grayish-blue-softer);
+}
+
+.card-3 .secondary-quote,
+.card-5 .secondary-quote {
+  color: var(--clr-very-dark-grayish-blue-softer-two);
+}
+
+.card-4 {
+  background-color: var(--clr-very-dark-blackish-blue);
+}
+
+.person {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.avatar img {
+  border-radius: 50%;
+  width: 65%;
+}
+
+.person-info {
+  margin-top: -0.25em;
+  margin-left: -0.5em;
+}
+
+.main-quote {
+  margin-top: 0.875em;
+}
+
+.secondary-quote {
+  margin-top: 1.5em;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
